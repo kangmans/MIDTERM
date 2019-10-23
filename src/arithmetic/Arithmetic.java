@@ -24,7 +24,8 @@ public class Arithmetic
     {
        
         ArithmeticBase r= new ArithmeticBase();
-        double result = r.calculate(1,2);
+        double result
+        result = r.enum operation(1,2);
         System.out.println("result :" +result); 
     
     }

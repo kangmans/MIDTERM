@@ -16,7 +16,24 @@ import java.util.Scanner;
 public class ArithmeticBase 
 {
  public double x,y;
-    double calculate(double x, double y) 
+ enum operation{
+        PLUS {
+    public double apply(double x, double y) { return x + y; }
+  }, 
+  MINUS {
+    public double apply(double x, double y) { return x - y; }
+  }, 
+  TIMES {
+    public double apply(double x, double y) { return x * y; 
+    }},
+  DIVIDE {
+    public double apply(double x, double y) { return x * y; }
+  }, 
+  ;
+
+  public abstract double apply(double x, double y);
+ }
+   /* double calculate(double x, double y) 
         {
         Scanner sc =new Scanner(System.in);
         System.out.println("enter String");
@@ -33,7 +50,7 @@ public class ArithmeticBase
                 return x / y;
             default:
                 throw new AssertionError("Unknown operations " + this);
-        }
+        } */
     }
    
-}
+
